@@ -1,3 +1,16 @@
 @use 'base/variables' as var;
 @use 'base/mixins' as mix;
 
+.comments {
+    padding: var.$separation 0;
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__grid {
+        @include mix.tablet { 
+            @include mix.grid(5, 2rem);
+        }
+    }
+}

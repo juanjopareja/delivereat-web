@@ -1,0 +1,50 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.comment {
+    background-color: var.$secondary;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    color: var.$white;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__header {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__image {
+        flex-basis: 10rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__author {
+        color: var.$white;
+        font-weight: bold;
+        margin: .5rem 0;
+    }
+
+    &__text {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin: 2rem 0 0 0;
+        padding-left: 3rem;
+        position: relative;
+
+        &::before {
+            content: '"';
+            position: absolute;
+            font-size: 10rem;
+            left: 0;
+            top: -4rem;
+            opacity: 0.2;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mix;
+
+.dealers {
+    padding: var.$separation;
+
+    &__heading {
+        text-align: center;
+        color: var.$secondary;
+    }
+
+    &__grid {
+        @include mix.tablet { 
+            @include mix.grid(2, var.$separation);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    &__text {
+        line-height: 1.5;
+        color: var.$secondary;
+    }
+
+    &__link {
+        @include mix.button(var.$primary, var.$white);
+    }
+}

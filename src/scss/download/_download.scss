@@ -6,16 +6,24 @@
     padding: var.$separation 0;
 
     &__grid {
+        display: flex;
+        flex-direction: column-reverse;
+
         @include mix.tablet { 
             @include mix.grid(2, var.$separation);
         }
     }
 
     &__image {
-        width: 50%;
-        margin: 0 auto;
+        width: 75%;
+        margin: 5rem auto 0 auto;
         transition-property: transform;
         transition-duration: .3s;
+
+        @include mix.tablet {
+            margin-top: 0;
+            width: 50%;
+        }
 
         &:hover {
             transform: rotate(4deg) scale(1.2);
